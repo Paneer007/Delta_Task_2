@@ -1,0 +1,86 @@
+#GameStuff,body,html{
+    width:100%;
+    height:100%;
+    position: relative;
+}
+#canvasTag{
+    position:relative;
+    overflow: hidden;
+}
+body,html,#root{
+    margin: 0px;
+    padding: 0px;
+    overflow: hidden;
+    display: block;
+}
+body,html{
+    background-color: #1f1d1e;
+}
+.Header{
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    color: antiquewhite;
+    text-align: center;
+    font-size:x-large;
+    font-family: montserrat;
+}
+.HeaderText{
+    width: full;
+}
+#root{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+.MainDivContent{
+    padding: 0px;
+}
+.RulesHeader{
+    font-family: quicksand;
+    color: antiquewhite;
+}
+.gameButton,.SAButtonClass{
+    outline: none;
+    background-color: antiquewhite;
+    padding: 5px;
+    border-radius: 5px;
+    border-color: black;
+}
+.gameButton:hover,.SAButtonClass:hover{
+    background-color: black;
+    border-color: antiquewhite;
+    color:antiquewhite
+}
+.RulesContent{
+    font-family: roboto;
+    color: rgb(194, 182, 167);
+    font-size: large;
+}
+#ScoreDiv{
+    background-color: black;
+    font-family: quicksand;
+    color: rgb(194, 182, 167);
+    font-size: large;
+}
+#ScorePTag{
+    margin: 0px;
+    padding: 8px;
+}
+.resultDivAndContent{
+    font-family: quicksand;
+    margin: 16px;
+    display: flex;
+    flex-direction: column;
+    background-color: gray ;
+    padding: 16px;
+    border-radius: 16px;
+    font-size: larger;
+    box-shadow: 2px 5px black;
+}
+.RulesHeader,.RulesContent,.gameButton{
+    margin: 8px;
+}
+#canvas{
+    width: 100%;
+}
