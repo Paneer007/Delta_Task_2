@@ -58,15 +58,9 @@ class PlatformObject {
         }
         if(((Math.abs(this.x- ballItem.x-ballItem.dx) < ballRadius)||((Math.abs(this.x + platformWidth- ballItem.x-ballItem.dx) < ballRadius)))
         &&(!((this.x+4< ballItem.x) && (ballItem.x <(this.x+platformWidth )))) 
-        &&((this.y- ballRadius +2)< (ballItem.y) && (ballItem.y)< (this.y+ platformThick+ballRadius -2))
+        &&((this.y- ballRadius*0.4)< (ballItem.y) && (ballItem.y)< (this.y+ platformThick+ballRadius*0.4))
         &&(this.col)
         &&(Math.abs(ballItem.dx) >1 )){
-            console.log(ballItem.dx)
-            console.log((((Math.abs(this.x- ballItem.x-ballItem.dx) < ballRadius)||((Math.abs(this.x + platformWidth- ballItem.x-ballItem.dx) < ballRadius)))))
-            console.log((!((this.x+4< ballItem.x) && (ballItem.x <(this.x+platformWidth )))))
-            console.log(((this.y- ballRadius ) < (ballItem.y) && (ballItem.y)< (this.y+ platformThick+ballRadius)))
-            console.log(this.col)
-            console.log('hello')
             this.col=false
             ballItem.reverseVeloSide()
         }
@@ -125,7 +119,7 @@ class BallObject {
     }
     updateScore(){
         if(!this.pause){
-            score+= (this.dx*this.dx)+(this.dy*this.dy)
+            score+= Math.floor(((this.dx*this.dx)+(this.dy*this.dy))/10) 
         }
     }
     respawnBall(){
