@@ -156,7 +156,7 @@ class BallObject {
 const removeBallFromList=(object)=>{
     let finalObject = healthOrbs.filter((b)=>b.x!=object.x ||  b.y!=object.y)
     healthOrbs=finalObject
-    if(health<=6){
+    if(health<5){
         health++
     }
 }
@@ -213,6 +213,7 @@ const animateUserBall=()=>{
     let ctx = canvas.getContext('2d')
     ctx.beginPath()
     ctx.arc(ballItem.x,ballItem.y,ballRadius,0,Math.PI*2,true)
+    ctx.fillStyle="blue"
     ctx.fill()
     ballItem.update()
     ballItem.deadBall()
