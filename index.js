@@ -239,6 +239,9 @@ const makePlatforms=()=>{
         listOfObject.push(platform)
     }
 }
+const moveMobileBall=(e)=>{
+    console.log(e)
+}
 const movesidewaysBall=(e)=>{
     if(e.key=='ArrowLeft'){
         ballItem.horizontalVelo(true)
@@ -248,9 +251,7 @@ const movesidewaysBall=(e)=>{
 }
 const ballControll=()=>{
     window.addEventListener('keydown',movesidewaysBall)
-    if(screen.orientation){
-        console.log(screen.orientation)
-    }
+    window.addEventListener('orientationchange', moveMobileBall);
 }
 const animateHeart=()=>{
     const canvas = document.getElementById('canvasTag')
